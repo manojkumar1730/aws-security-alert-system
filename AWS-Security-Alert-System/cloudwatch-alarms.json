@@ -1,0 +1,13 @@
+{
+  "AlarmName": "SecurityAlertAlarm",
+  "MetricName": "UnauthorizedAPICalls",
+  "Namespace": "AWS/CloudTrail",
+  "Statistic": "Sum",
+  "Period": 300,
+  "EvaluationPeriods": 1,
+  "Threshold": 1,
+  "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+  "AlarmActions": ["arn:aws:sns:region:account-id:security-alerts"],
+  "OKActions": [],
+  "AlarmDescriptions": "Alarm for unauthorized API calls detected by CloudTrail."
+}
